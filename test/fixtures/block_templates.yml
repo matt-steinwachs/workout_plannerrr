@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workout_template: one
+  exercise: one
+
+two:
+  workout_template: two
+  exercise: two

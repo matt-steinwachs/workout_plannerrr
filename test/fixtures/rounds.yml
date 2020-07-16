@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  block: one
+  reps: MyString
+  sets: 1
+  weight: 1
+  round_template: one
+  start: 2020-07-13 11:49:11
+  end: 2020-07-13 11:49:11
+
+two:
+  block: two
+  reps: MyString
+  sets: 1
+  weight: 1
+  round_template: two
+  start: 2020-07-13 11:49:11
+  end: 2020-07-13 11:49:11

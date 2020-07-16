@@ -1,0 +1,14 @@
+rails g scaffold Reference name:string value:integer
+rails g scaffold Exercise name:string reference:belongs_to
+
+rails g scaffold CycleTemplate name:string
+rails g scaffold WorkoutTemplate name:string cycle_template:belongs_to
+rails g scaffold BlockTemplate workout_template:belongs_to exercise:belongs_to
+rails g scaffold RoundTemplate block_template:belongs_to reps:string sets:integer percent:float weight:integer
+
+rails g scaffold Cycle name:string cycle_template:belongs_to start:datetime end:datetime references:string
+rails g scaffold Workout name:string cycle:belongs_to workout_template:belongs_to start:datetime end:datetime
+rails g scaffold Block workout:belongs_to exercise:belongs_to block_template:belongs_to start:datetime end:datetime
+rails g scaffold Round block:belongs_to reps:string sets:integer weight:integer round_template:belongs_to start:datetime end:datetime
+
+rails g paper_trail:install --with-changes

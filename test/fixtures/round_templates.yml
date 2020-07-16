@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  block_template: one
+  reps: MyString
+  sets: 1
+  percent: 1.5
+  weight: 1
+
+two:
+  block_template: two
+  reps: MyString
+  sets: 1
+  percent: 1.5
+  weight: 1

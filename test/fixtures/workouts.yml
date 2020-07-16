@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  cycle: one
+  workout_template: one
+  start: 2020-07-13 11:49:09
+  end: 2020-07-13 11:49:09
+
+two:
+  name: MyString
+  cycle: two
+  workout_template: two
+  start: 2020-07-13 11:49:09
+  end: 2020-07-13 11:49:09
