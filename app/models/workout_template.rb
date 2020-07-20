@@ -10,9 +10,11 @@ class WorkoutTemplate < ApplicationRecord
   before_validation(on: :create) do
     if self.cycle_template_id.present?
       self.order = (
-        WorkoutTemplate.where(
+        max_order = WorkoutTemplate.where(
           :cycle_template_id => self.cycle_template_id
-        ).maximum(:order)+1
+        ).maximum(:order)
+
+        self.order = (max_order.present? ? max_order+1 : 0)
       )
     end
   end
