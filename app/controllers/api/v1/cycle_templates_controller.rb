@@ -60,6 +60,6 @@ class Api::V1::CycleTemplatesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def cycle_template_params
-      params.require(:cycle_template).permit(:name)
+      params.require(:cycle_template).permit(:name, :hide_completed)
     end
 end

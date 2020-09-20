@@ -22,9 +22,14 @@ class Workout < ApplicationRecord
 
           bt.round_templates.each do |rt|
             weight = (
-              rt.percent.present? ? (
-                (self.cycle.references.select{|r| r["id"] == b.exercise.reference_id}.first["value"].to_f * rt.percent).round()
-              )
+              rt.percent.present? ?
+                (
+                  (
+                    self.cycle.references.select{|r|
+                      r["id"] == b.exercise.reference_id
+                    }.first["value"].to_f * rt.percent
+                  ).round()
+                )
               : rt.weight.present? ? rt.weight
               : nil
             )

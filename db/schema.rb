@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_16_035037) do
+ActiveRecord::Schema.define(version: 2020_09_20_160912) do
 
   create_table "block_templates", force: :cascade do |t|
     t.integer "workout_template_id"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_035037) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hide_completed", default: false
   end
 
   create_table "cycles", force: :cascade do |t|
@@ -87,6 +88,8 @@ ActiveRecord::Schema.define(version: 2020_07_16_035037) do
     t.datetime "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "work_interval"
+    t.integer "rest_interval"
     t.index ["block_id"], name: "index_rounds_on_block_id"
     t.index ["round_template_id"], name: "index_rounds_on_round_template_id"
   end
@@ -119,6 +122,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_035037) do
     t.datetime "end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "timed_blocks", default: false
     t.index ["cycle_id"], name: "index_workouts_on_cycle_id"
     t.index ["workout_template_id"], name: "index_workouts_on_workout_template_id"
   end
