@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_20_160912) do
+ActiveRecord::Schema.define(version: 2021_01_03_202844) do
 
   create_table "block_templates", force: :cascade do |t|
     t.integer "workout_template_id"
@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 2020_09_20_160912) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "timed_blocks", default: false
+    t.string "notes"
     t.index ["cycle_id"], name: "index_workouts_on_cycle_id"
     t.index ["workout_template_id"], name: "index_workouts_on_workout_template_id"
   end

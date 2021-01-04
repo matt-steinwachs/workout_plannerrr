@@ -64,13 +64,21 @@ class Api::V1::CyclesController < ApplicationController
           :_destroy,
           :id,
           :name,
+          :notes,
           :workout_template_id,
           :end,
           { blocks_attributes: [
             :_destroy,
             :id,
             :exercise_id,
-            { rounds_attributes: [ :_destroy, :id, :reps, :sets, :percent, :weight] }
+            { rounds_attributes: [
+              :_destroy,
+              :id,
+              :reps,
+              :sets,
+              :percent,
+              :weight
+            ]}
           ]}
         ]}
       )
